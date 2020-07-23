@@ -1,0 +1,33 @@
+
+nav.nav{
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(62, 62, 158);
+  
+  .link {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+
+
+    a {
+      color: whitesmoke;
+      text-decoration: none;
+      margin-right: 40px;
+      font-size: 1.3em;
+
+      @media screen and (max-width: 500px) {
+      margin-right: 20px;
+      font-size: 1em;
+    }
+
+      &:hover{
+        color: red;
+        text-decoration: none;
+      }
+    }
+
+}
+}
