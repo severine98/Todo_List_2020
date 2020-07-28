@@ -19,9 +19,10 @@ section.login {
     padding: 10px;
     padding-bottom: 20px;
     width: 100%;
+
     @media screen and (max-width: 500px) {
       font-size: 20px;
-  }
+    }
   }
 
   div.form {
@@ -39,9 +40,8 @@ section.login {
 
     @media screen and (max-width: 630px) {
       width: 80%;
-      height: 60%;
-  }
-
+      height: 50%;
+    }
 
     button {
       display: inline-block;
