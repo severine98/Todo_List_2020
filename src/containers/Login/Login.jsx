@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import firebase, { googleProvider, facebookProvider } from "../../firebase";
 import styles from "./Login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+// import { faGoogle } from "@fortawesome/free-solid-svg-icons";
+// import { faFacebookSquare } from "@fortawesome/free-solid-svg-icons";
 import { redirectTo } from "@reach/router";
 
 class Login extends Component {
@@ -78,14 +79,14 @@ class Login extends Component {
             style={{ backgroundColor: "red" }}
           >
             Google
-            <FontAwesomeIcon icon={faCoffee} className={styles.icon} />
+            <FontAwesomeIcon icon={["fab", "google"]} className={styles.icon} />
           </button>
           <button
             onClick={this.signInFacebook}
             className={styles.alternativeSignIn}
           >
             Facebook
-            <FontAwesomeIcon icon={faCoffee} className={styles.icon} />
+            <FontAwesomeIcon icon={["fab", "facebook"]} className={styles.icon} />
           </button>
         </div>
       </section>
