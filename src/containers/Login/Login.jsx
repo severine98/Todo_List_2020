@@ -39,7 +39,6 @@ class Login extends Component {
       .auth()
       .signInWithRedirect(googleProvider)
       .then(() => console.log("redirecting"));
-    console.log("logged in with google");
   };
 
   signInFacebook = () => {

@@ -3,6 +3,7 @@ import { firestore } from "../../firebase";
 import styles from "./Notes.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 
 class Notes extends Component {
   state = {
@@ -74,14 +75,11 @@ class Notes extends Component {
     });
   };
 
-  // remove from database
-
   removeFromDatabase = (i) => {
     firestore
       .collection(this.props.user.uid)
       .doc(i.id)
       .delete()
-      // .then((res) => this.getAllFromFirebase())
       .then((res) => console.log("item deleted from Firebase!"))
       .catch((err) => console.log(err));
   };
@@ -101,6 +99,11 @@ class Notes extends Component {
               type="text"
               placeholder="Enter todo here...[Press Enter]"
               autoComplete="off"
+            />
+            <FontAwesomeIcon
+              icon={faCheckSquare}
+              className={styles.icon}
+              onClick={this.handleSubmit}
             />
           </form>
           <ul>
@@ -131,7 +134,10 @@ class Notes extends Component {
                       }}
                       className={styles.delete}
                     >
-                      <FontAwesomeIcon icon={faTrash} className={styles.icon} />
+                      <FontAwesomeIcon
+                        icon={faTrash}
+                        className={styles.delete}
+                      />
                     </button>
                   </li>
                 </>
