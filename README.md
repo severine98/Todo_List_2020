@@ -1,6 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Private To-do List
+In order to access their to-do list, a user must either sign up or sign in to the app with their email, Google or Facebook account. They are then redirected to the home page which displays a welcome message, their picture and email they used to sign in. The user can then navigate to their to-do list, which is empty upon their first visit. They are able to add items to their list, cross items out, and delete them. Their to-do list is dynamically being saved, if the user signs out and then signs back in, their to-do list remains the same as they last left it. 
 
-## Available Scripts
+## Purpose of this project
+The aim of this project was to get familiar with Firebase and using Authentication in a project. It allowed me to understand more about databases, and apply private routing to a website. The first step of the project was to initalize the authentication by using three sign-in methods. The home page was created in order to practice accessing private information from the user object and rendering them onto the page. The to-do list section initially was not private, and displayed all the items inserted by all users of the app. The final stage of development was to introduce user-specific CRUD functionalities, allowing users to enter data only accessible by themselves. 
+
+### Available Scripts
 
 In the project directory, you can run:
 
